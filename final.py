@@ -9,8 +9,8 @@ def main():
 		entropy = input.read()
 	with open("./salt2", "r") as input:
 		salt = input.read()
-        with open("./hash.txt", "w") as output:
-               output.write('$ml$' + iterations + '$' + "".join(salt.split()) + '$' + "".join(entropy.split()))
+        with open("./hash.txt", "a") as output:
+               output.write('$ml$' + iterations + '$' + "".join(salt.split()) + '$' + "".join(entropy.split()) + '\n')
 
 
 if __name__ == "__main__":
